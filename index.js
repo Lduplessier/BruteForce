@@ -1,21 +1,34 @@
-/*'use strict'
+'use strict'
 
-class BruteForce {
-    constructor (max, id) {
-        this.max = max;
-        this.char = 
-        [
-        '0', '1', '2', '3', '4', '5', '6','7', '8', '9', 
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-        '°', '§', '$', '&', '+', '-', '_', ';', 'µ', '@', '€',
-        'É', 'é', 'Á', 'á', 'Ú', 'ú', 'Í', 'í', 'Ó', 'ó', 'È', 'è', 'À', 'à', 'Ù', 'ù', 'Ì', 'ì', 'Ò', 'ò', 'Ü', 'ü', 'Ö', 'ö', 'Ä', 'ä'
-        ];
+var total_erreur=0;
+function Check() {
+    var tabc=Check.arguments; 
+    var ok=0;
+    var tab="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789_$&#@";
+
+    for (var no=0;no<tabc.length;no++) {
+        checksum=tabc[no];
+        var password="00000";
+        var nblog=login.length;
+        var nbpass=password.length;
+        var sum=1;
+        var n=Math.max(nblog,nbpass)
+        for (var i=0;i<n;i++) {
+            var index1=tab.indexOf(login.substring(i,i+1))+10;
+            var index2=tab.indexOf(password.substring(i,i+1))+10;
+            sum=sum+(index1*n*(i+1))*(index2*(i+1)*(i+1));
+        }
+        if (sum==checksum) {
+            alert("password found");
+            ok++;
+        }
+
     }
-    
-
-
+    if (ok==0) {
+        total_essai++;
+        }
 }
 
-pass = new BruteForce (15)
-**/
+function Verifie() {
+Check()
+}
