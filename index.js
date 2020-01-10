@@ -1,6 +1,6 @@
 'use strict'
 
-var total_erreur=0;
+var total_essai=0;
 function Check() {
     var tabc=Check.arguments; 
     var ok=0;
